@@ -2,7 +2,7 @@
 
 - *Date: july 2015*
 - *Docker version: 1.0.1*
-- *Test on : Ubuntu 14.04*
+- *Test on : Ubuntu 14.04(virtualbox VM)*
 
 ### Description
 
