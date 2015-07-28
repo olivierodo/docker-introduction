@@ -1,8 +1,8 @@
 # docker-introduction
 
 - *Date: july 2015*
-- *Docker version: 1,0.1*
-- *Created on : Ubuntu 14.04*
+- *Docker version: 1.0.1*
+- *Test on : Ubuntu 14.04*
 
 ### Description
 
@@ -33,6 +33,20 @@ docker run -d -p 80:3000 -v $(pwd):/usr/src --name din docker-intro
 - ``` -v $(pwd):/usr/src ``` Mpunt the current path ( $(pwd) ) to the workdir inside the container (/usr/src)
 - ``` -name din``` Call the container **din**
 - ``` docker-intro``` Docker image to use
+
+Now you have just need to connect to the adresse  :
+```
+http://127.0.0.1
+```
+
+If you try from a virtual machine or boot2docker, you should connect to :
+```
+http://[IP VM/BOOT2DOCKER]
+```
+
+You should see the nice message **Hello world**
+![HelloWorld](doc/images/hello.png)
+
 
 If you want to restart the container you may have this error:
 
