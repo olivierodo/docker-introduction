@@ -17,9 +17,6 @@ WORKDIR /usr/src/
 # Install Express
 RUN npm install -g express
 
-# Install all the modules
-RUN npm install
-
 # Create an alias for nodejs
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
@@ -27,5 +24,5 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 EXPOSE 3000
 
 # Command to run the app
-CMD npm start
+CMD npm install && npm start
 
