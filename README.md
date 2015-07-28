@@ -12,7 +12,7 @@ Learn Docker in 5 minutes with a small introduction on a nodejs app.
 
 - Install [docker](https://docs.docker.com/installation/) (or [boot2docker](http://boot2docker.io/) if you are an OSX user)
 - Clone the project ```git clone https://github.com/olivierodo/docker-introduction.git && cd docker-introduction```
-- Take a look to the [Dockerfile[(DockerFile)
+- Take a look to the [Dockerfile](DockerFile)
 
 #### Build the container:
 
