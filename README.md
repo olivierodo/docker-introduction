@@ -1,8 +1,8 @@
 # docker-introduction
 
-*Date: july 2015*
-*Docker version: 1,0.1*
-*Created on : Ubuntu 14.04*
+- *Date: july 2015*
+- *Docker version: 1,0.1*
+- *Created on : Ubuntu 14.04*
 
 ### Description
 
@@ -10,9 +10,9 @@ Learn Docker in 5 minutes with a small introduction on a nodejs app.
 
 ### Getting start
 
-- Install docker (or boot2docker if you are an OSX user)
-- Clone the project ``` git clone https://github.com/olivierodo/docker-introduction.git && cd docker-introduction
-- Take a look to the (Dockerfile)[DockerFile]
+- Install [docker](https://docs.docker.com/installation/) (or [boot2docker](http://boot2docker.io/) if you are an OSX user)
+- Clone the project ```git clone https://github.com/olivierodo/docker-introduction.git && cd docker-introduction```
+- Take a look to the [Dockerfile[(DockerFile)
 
 #### Build the container:
 
@@ -28,11 +28,11 @@ docker build -t docker-intro .
 docker run -d -p 80:3000 -v $(pwd):/usr/src --name din docker-intro
 ```
 
-``` -d ``` detach the container
-``` -p 80:3000 ``` Do a port forwarding from the container's port (3000) to the host's port (80)
-``` -v $(pwd):/usr/src ``` Mpunt the current path ( $(pwd) ) to the workdir inside the container (/usr/src)
-``` -name din``` Call the container **din**
-``` docker-intro``` Docker image to use
+- ``` -d ``` detach the container
+- ``` -p 80:3000 ``` Do a port forwarding from the container's port (3000) to the host's port (80)
+- ``` -v $(pwd):/usr/src ``` Mpunt the current path ( $(pwd) ) to the workdir inside the container (/usr/src)
+- ``` -name din``` Call the container **din**
+- ``` docker-intro``` Docker image to use
 
 If you want to restart the container you may have this error:
 
@@ -56,11 +56,11 @@ You should see :
 
 #### If something wrong
 
-If you wan to know what's wrong with your container just run :
+If you want to know what's wrong with your container just run :
 
 
 ```sh
 docker run -it -p 80:3000 -v $(pwd):/usr/src --name din docker-intro bash
 ```
 We use the option ```-it``` and decide to override the CMD command from the Dockerfile (nmp start) by ```bash```
-On this way you will acces by ssh on your container as a root user.
+This way you will acces by ssh on your container as a root user.
