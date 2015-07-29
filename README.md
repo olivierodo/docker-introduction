@@ -17,7 +17,7 @@ Learn Docker in 5 minutes with a small introduction on a nodejs app.
 #### Build the container:
 
 ```sh
-docker build -t docker-intro .
+$ docker build -t docker-intro .
 ```
 
 **Be careful : everytime you update the [Dockerfile](Dockerfile) you have to build your container**
@@ -25,7 +25,7 @@ docker build -t docker-intro .
 ##### Run the container:
 
 ```sh
-docker run -d -p 80:3000 -v $(pwd):/usr/src --name din docker-intro
+$ docker run -d -p 80:3000 -v $(pwd):/usr/src --name din docker-intro
 ```
 
 - ``` -d ``` detach the container
@@ -54,6 +54,12 @@ If you want to restart the container you may have this error:
 YYYY/mm/dd HH:ii:ss Error response from daemon: Conflict, The name din is already assigned to {CONTAINER_ID}. You have to delete (or rename) that container to be able to assign din to a container again.
 ```
 
+You just need to delete the container :
+
+```sh
+$ docker rm -f din
+```
+
 **If you don't modify the [Dockerfile](Dockerfile) it's not necessary to build your container before running it**
 
 #### Verification
@@ -61,7 +67,7 @@ YYYY/mm/dd HH:ii:ss Error response from daemon: Conflict, The name din is alread
 To see if you the container is running run :
 
 ```sh
-docker ps -a
+$ docker ps -a
 ```
 
 You should see :
@@ -74,7 +80,7 @@ If you want to know what's wrong with your container just run :
 
 
 ```sh
-docker run -it -p 80:3000 -v $(pwd):/usr/src --name din docker-intro bash
+$ docker run -it -p 80:3000 -v $(pwd):/usr/src --name din docker-intro bash
 ```
-We use the option ```-it``` and decide to override the CMD command from the Dockerfile (nmp start) by ```bash```
+We use the option ```-it``` and decide to override the CMD command from the Dockerfile (npm start) by ```bash```
 This way you will acces by ssh on your container as a root user.
