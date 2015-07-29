@@ -20,7 +20,8 @@ Learn Docker in 5 minutes with a small introduction on a nodejs app.
 $ docker build -t docker-intro .
 ```
 
-**Be careful : everytime you update the [Dockerfile](Dockerfile) you have to build your container**
+***Be careful : everytime you update the [Dockerfile](Dockerfile) you have to build your container***
+
 
 ##### Run the container:
 
