@@ -85,3 +85,15 @@ $ docker run -it -p 80:3000 -v $(pwd):/usr/src --name din docker-intro bash
 ```
 We use the option ```-it``` and decide to override the CMD command from the Dockerfile (npm start) by ```bash```
 This way you will acces by ssh on your container as a root user.
+
+
+### Thanks
+
+Docker-introduction @2015 , Rodomond Olivier. Released under the MIT License.
+Authored and maintained by Rodomond Olivier  with help from contributors.
+
+
+> [olivier.rodomond.com](http://olivier.rodomond.com) &nbsp;&middot;&nbsp;
+> GitHub [@olivierodo](https://github.com/olivierodo) &nbsp;&middot;&nbsp;
+> Twitter [@olivierodo](https://twitter.com/olivierodo)
+
